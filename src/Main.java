@@ -1,24 +1,37 @@
 import java.util.ArrayList;
 
 public class Main {
+    static ArrayList<String> inventario = new ArrayList<>();
     public static void main(String[] args) {
 
-    ArrayList<String> inventario = new ArrayList<>();
+          agregarObjeto("Viajar");
+          agregarObjeto("Explorar");
+          agregarObjeto("Cantar");
+          agregarObjeto("Cantar");
 
-    inventario.add("Viajar");
-    inventario.add("Explorar");
-    inventario.add("Cantar");
+        System.out.println("Inventario:");
+        mostrarInventario();
 
-    for(int indice = 0; indice < inventario.size(); indice++){
-        System.out.println(inventario.get(indice));
+        System.out.println("Retiro Objeto");
+        retirarObjeto("Viajar");
+
+        System.out.println("Inventario Actualizado");
+        mostrarInventario();
     }
 
-    inventario.set(1, "nuevoValor");
 
-        System.out.println(inventario.size());
 
-        for(int indice = inventario.size() -1; indice >= 0; indice--){
-            System.out.println(inventario.get(indice));
+
+
+        public static void agregarObjeto(String objeto) {
+            inventario.add(objeto);
         }
-    }
+        public static void mostrarInventario() {
+        for (int i = 0; i < inventario.size(); i++) {
+            System.out.println(inventario.get(i));
+        }
+        }
+        public static void retirarObjeto(String objeto) {
+            inventario.remove(objeto);
+        }
 }
