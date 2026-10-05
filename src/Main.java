@@ -9,7 +9,16 @@ public class Main {
     inventario.add("Explorar");
     inventario.add("Cantar");
 
-        System.out.println(inventario);
+    for(int indice = 0; indice < inventario.size(); indice++){
+        System.out.println(inventario.get(indice));
+    }
+
+    inventario.set(1, "nuevoValor");
+
         System.out.println(inventario.size());
+
+        for(int indice = inventario.size() -1; indice >= 0; indice--){
+            System.out.println(inventario.get(indice));
+        }
     }
 }
