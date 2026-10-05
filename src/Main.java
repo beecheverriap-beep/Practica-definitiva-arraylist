@@ -17,6 +17,13 @@ public class Main {
 
         System.out.println("Inventario Actualizado");
         mostrarInventario();
+
+        if(inventario.contains("Benjamin")){
+            System.out.println("Usuario no existente");
+        } else {
+            System.out.println("Usuario existente");
+        }
+
     }
 
 
